@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import VideoPlayer from './VideoPlayer';
 
 const videoList = [
-  { id: 'video_1', title: 'Apna College Lecture', url: '/videoplayback (1).mp4' },
-  { id: 'video_2', title: 'Before Doing Engineering', url: '/lecture2.mp4' },
-  { id: 'video_3', title: 'Gopi Project Explanation', url: '/lecture.mp4' },
-  { id: 'video_4', title: 'Shradda', url: '/videoplayback (1).mp4' },
+  { id: 'video_1', title: 'Apna College Lecture', url: 'https://www.youtube.com/watch?v=VX7qRjDhfLs' },
+  { id: 'video_2', title: 'Before Doing Engineering', url: 'https://www.youtube.com/watch?v=SD8E8pTXYQ8' },
+  { id: 'video_3', title: 'Gopi Project Explanation', url: 'https://www.youtube.com/watch?v=jtgxSDACnyU' },
+  { id: 'video_4', title: 'Shradda', url: 'https://www.youtube.com/watch?v=sXSYTUqFGVQ' },
   { id: 'video_5', title: 'Indian Education System', url: 'https://www.youtube.com/watch?v=xPftLsZeKSg' },
 ];  
 
