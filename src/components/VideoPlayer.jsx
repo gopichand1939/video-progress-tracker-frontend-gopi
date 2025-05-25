@@ -48,24 +48,26 @@ const VideoPlayer = ({ video, onProgressUpdate }) => {
     return merged;
   };
 
-  const saveProgress = async () => {
-    try {
-      await axios.post('http://localhost:5000/api/progress/save', {
-        userId,
-        videoId,
-        watchedIntervals,
-        lastPosition,
-        progress,
-      });
-    } catch (err) {
-      console.error('❌ Save error:', err.message);
-    }
-  };
+const saveProgress = async () => {
+  try {
+    await axios.post('https://video-progress-tracker-backend-j4nm.onrender.com/api/progress/save', {
+      userId,
+      videoId,
+      watchedIntervals,
+      lastPosition,
+      progress,
+    });
+    console.log('✅ Progress saved to Render backend');
+  } catch (err) {
+    console.error('❌ Error saving progress:', err.message);
+  }
+};
+
 
   useEffect(() => {
     const fetchProgress = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/progress/${userId}/${videoId}`);
+const res = await axios.get(`https://video-progress-tracker-backend-j4nm.onrender.com/api/progress/${userId}/${videoId}`);
         if (res.data) {
           setWatchedIntervals(res.data.watchedIntervals || []);
           setLastPosition(res.data.lastPosition || 0);
